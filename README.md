@@ -22,6 +22,7 @@ alias kafka-server-start="$KAFKA_HOME/bin/kafka-server-start.sh -daemon $KAFKA_H
 alias kafka-server-stop="$KAFKA_HOME/bin/kafka-server-stop.sh"
 ```
 
+
 ## Topics API
 
 ### List topics
@@ -35,6 +36,7 @@ alias kafka-server-stop="$KAFKA_HOME/bin/kafka-server-stop.sh"
 ### Topic info
 
 `$KAFKA_HOME/bin/kafka-topics.sh --describe --zookeeper localhost:2181 --topic test`
+
 
 
 ## Topic configuration
