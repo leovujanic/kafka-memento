@@ -4,11 +4,11 @@
 
 ## Starting
 
-Start Zookeeper:
+### Start Zookeeper
 
 `$KAFKA_HOME/bin/zookeeper-server-start.sh $KAFKA_HOME/config/zookeeper.properties`
 
-Start Kafka:
+### Start Kafka
 
 `$KAFKA_HOME/bin/kafka-server-start.sh $KAFKA_HOME/config/server.properties`
 
@@ -24,19 +24,20 @@ alias kafka-server-stop="$KAFKA_HOME/bin/kafka-server-stop.sh"
 
 ## Topics API
 
-**List topics**
+### List topics
 
 `$KAFKA_HOME/bin/kafka-topics.sh --list --zookeeper localhost:2181`
 
-**Create topic**
+### Create topic
 
 `$KAFKA_HOME/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test`
 
-**Topic info**
+### Topic info
+
 `$KAFKA_HOME/bin/kafka-topics.sh --describe --zookeeper localhost:2181 --topic test`
 
 
-**Topic configuration**
+## Topic configuration
 
 To override default topic configuration use `--config <config.name>=<config.value>`
 
@@ -57,13 +58,13 @@ To check overrides set on the topic run
 Full list of config options can be found [here](https://kafka.apache.org/documentation/#topicconfigs)
 
 
-**Delete topic**
+### Delete topic
 
 `$KAFKA_HOME/bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic my-topic`
 
 See [this](topic/README.md) for deleting multiple topics
 
-**Purge topic**
+### Purge topic
 The following command will set topic retention to 1 second. Execute it and wait for 1 second then return to the old retention policy
 `$KAFKA_HOME/bin/kafka-topics.sh --zookeeper localhost:2181 --alter --topic my-topic --config retention.ms=1000`
 
